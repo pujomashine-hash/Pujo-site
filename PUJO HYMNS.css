@@ -5,7 +5,7 @@ body {
 #song-list {
   text-align: center;
   width: 350px;
-  height: 1500px;
+  height: 2300px;
   background-color: white;
   box-shadow: 3px 2px 4px 2px pink;
   margin-top:1px;
@@ -51,4 +51,4 @@ button:hover {
 #top {
   background-color:#C71585;
   background-image: url(MAUA.jpg);
-}
+} 
