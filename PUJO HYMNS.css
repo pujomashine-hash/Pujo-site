@@ -25,6 +25,8 @@ input {
   margin-bottom: 30px;
   border: 5px solid white;
   z-index: 1000;
+  border-radius: 5px;
+  width: 200px;
 }
 button {
   margin-bottom: 1px;
@@ -49,7 +51,27 @@ button:hover {
   border-radius: 10px;
 }
 #top {
-  background-color:#C71585;
+  background-color:black;
   background-image: url(MAUA.jpg);
   box-shadow: 3px 3px 3px red;
 } 
+#playlist {
+  display: none;
+  color:blue;
+}
+#favourite{
+  display:none;
+  color:red;
+}
+#navigation-bar {
+  bottom: 0;
+  width:100%;
+  position: fixed;
+  background-color: #1f1f1f;
+  left: 0;
+}
+.change {
+  padding: 10px ;
+  margin:10px;
+  bottom: 0;
+}
