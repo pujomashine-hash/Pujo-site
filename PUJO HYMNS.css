@@ -74,5 +74,12 @@ button:hover {
   padding: 10px ;
   margin:10px;
   bottom: 0;
+  background-color: black;
+  color: white;
+  border-radius: 8px;
+  box-shadow: 2px 2px 2px magenta;
 }
-
+.change.active {
+  background-color: #888;
+  color: white;
+}
