@@ -1,4 +1,4 @@
-
+/* ====== GLOBAL ====== */
 body {
   background-color: black;
   text-align: center;
@@ -11,19 +11,20 @@ input#search {
   margin: 20px 0;
   padding: 8px;
   border: 3px solid white;
-  border-radius: 10px;
+  border-radius: 5px;
   width: 200px;
   background-color: #1f1f1f;
   color: white;
 }
 
+/* ====== SCREENS ====== */
 .screen {
   display: none;
   padding: 10px;
 }
 
 #song-list {
-  display: block; 
+  display: block; /* default screen */
   max-width: 1000px;
   margin: 0 auto;
 }
@@ -32,6 +33,7 @@ input#search {
   display: none;
 }
 
+/* ====== BUTTONS ====== */
 .nyimbo {
   width: 90%;
   max-width: 400px;
@@ -71,7 +73,7 @@ input#search {
   margin: 0;
 }
 
-
+/* ====== THREE DOTS DROPDOWN ====== */
 .three-dots {
   position: relative;
   font-size: 20px;
@@ -108,7 +110,7 @@ input#search {
   border-radius: 5px;
 }
 
-
+/* ====== NAVIGATION BAR ====== */
 #navigation-bar {
   position: fixed;
   bottom: 0;
