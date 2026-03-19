@@ -50,6 +50,7 @@ input#search {
   display: block; /* default screen */
   max-width: 1000px;
   margin: 0 auto;
+  padding-bottom: 20;
 }
 
 #song-details {
