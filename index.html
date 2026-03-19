@@ -8,7 +8,14 @@
   <link rel="manifest" href="manifest.json">
  </head>
  <body>
+   <!-- MENU NA TOP -->
    <div id="top">
+     <aside id="left">
+       <button id="menu-btn"> ≡ </button>
+        <div id="menu">
+         <p> PUJO HYMNS<br> Version 1.9.7.1 </p>
+        </div>
+      </aside>
      <input type="text" placeholder="Tafuta wimbo  hapa" id="search">
    </div>
   <div id="song-list" class="screen">
@@ -17,10 +24,10 @@
   <div id="song-details" class="screen">
      <h3 id="title"> </h3>
      <audio controls id="audio" controlsList="nodownload"> </audio> <br>
-       <button id="play"> play ▶️</button>
-       <button id="pause"> pause ⏯️</button>
-       <button id="back"> Return⏹️</button>
-       <button id="midi"> play midi📀</button>
+       <button id="play" class="controlbtn"> play ▶️</button>
+       <button id="pause" class="controlbtn"> pause ⏯️</button>
+       <button id="back" class="controlbtn"> Return⏹️</button>
+       <button id="midi" class="controlbtn"> play midi📀</button>
             <p id="lyrics"> </p>
   </div>
   <div id="playlist" class="screen">
