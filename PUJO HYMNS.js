@@ -1,7 +1,18 @@
-document.addEventListener("DOMContentLoaded",()=> {
+document.addEventListener("DOMContentLoaded", () => {
+
 const navButtons = document.querySelectorAll(".change");
 const screens = document.querySelectorAll(".screen");
 
+const songList = document.getElementById("song-list");
+const playlistContainer = document.getElementById("playlist-container");
+const All = document.getElementById("All");
+
+// ===== INIT: SHOW PLAYLISTS =====
+if (playlistContainer) {
+  playlistContainer.style.visibility = "visible";
+}
+
+// ===== NAVIGATION =====
 navButtons.forEach(btn => {
   btn.addEventListener("click", () => {
     navButtons.forEach(b => b.classList.remove("active"));
@@ -13,25 +24,27 @@ navButtons.forEach(btn => {
   });
 });
 
-// SEARCH BAR 
+// ===== SEARCH (HIDE / SHOW) =====
 const searchInput = document.getElementById("search");
-if(searchInput) {
+
+if (searchInput) {
   searchInput.addEventListener("keyup", () => {
     const searchValue = searchInput.value.toLowerCase();
-    document.querySelectorAll(".nyimbo").forEach(song => {
-      const title = song.querySelector(".title").textContent.toLowerCase();
-      if (title.includes(searchValue)) {
-        song.style.display = "";
+
+    document.querySelectorAll(".nyimbo").forEach(btn => {
+      const title = btn.querySelector(".title").textContent.toLowerCase();
+      const artist = btn.querySelector(".artist").textContent.toLowerCase();
+
+      if (title.includes(searchValue) || artist.includes(searchValue)) {
+        btn.style.display = "";
       } else {
-        song.style.display = "none";
+        btn.style.display = "none";
       }
     });
   });
 }
 
-// ====== SONG BUTTONS ======
-const songList = document.getElementById("song-list");
-
+// ===== LOAD SONGS =====
 fetch("PUJO HYMNS.json")
   .then(res => res.json())
   .then(data => {
@@ -47,17 +60,73 @@ fetch("PUJO HYMNS.json")
           <div class="title">${song.title}</div>
           <div class="artist">${song.artist}</div>
         </div>
-        <span class="three-dots">⋮
-          <div class="dots-menu">
-            <p>Share</p>
-            <p>Like 👍</p>
-          </div>
-        </span>
       `;
+
       songList.appendChild(btn);
     });
 
-    // SONG CLICK
+    // ===== PLAYLIST CLICK =====
+    document.querySelectorAll(".playlist").forEach(playlist => {
+
+      playlist.addEventListener("click", () => {
+
+        const artist = playlist.querySelector(".playlist-name").textContent.trim().toLowerCase();
+
+        // highlight
+        document.querySelectorAll(".playlist").forEach(p => p.classList.remove("active"));
+        playlist.classList.add("active");
+
+        // filter songs (HIDE / SHOW ONLY)
+        document.querySelectorAll(".nyimbo").forEach(btn => {
+          const songArtist = btn.querySelector(".artist").textContent.toLowerCase();
+
+          if (songArtist === artist) {
+            btn.style.display = "";
+          } else {
+            btn.style.display = "none";
+          }
+        });
+
+        // hide playlists (VISIBLE CONTROL)
+        if (playlistContainer) {
+          playlistContainer.style.visibility = "hidden";
+        }
+
+        // show ALL button
+        if (All) {
+          All.style.display = "block";
+        }
+
+      });
+
+    });
+
+    // ===== ALL BUTTON =====
+    if (All) {
+      All.addEventListener("click", () => {
+
+        // show all songs
+        document.querySelectorAll(".nyimbo").forEach(btn => {
+          btn.style.display = "";
+        });
+
+        // remove highlight
+        document.querySelectorAll(".playlist").forEach(p => {
+          p.classList.remove("active");
+        });
+
+        // show playlists again
+        if (playlistContainer) {
+          playlistContainer.style.visibility = "visible";
+        }
+
+        // hide ALL button
+        All.style.display = "none";
+
+      });
+    }
+
+    // ===== SONG CLICK =====
     const songDetails = document.getElementById("song-details");
     const lyrics = document.getElementById("lyrics");
     const audio = document.getElementById("audio");
@@ -71,8 +140,8 @@ fetch("PUJO HYMNS.json")
 
       fetch(btn.dataset.lyrics)
         .then(res => res.text())
-        .then(data => {
-          lyrics.innerHTML = data.replace(/\n/g, "<br>");
+        .then(text => {
+          lyrics.innerHTML = text.replace(/\n/g, "<br>");
         });
 
       audio.src = btn.dataset.file;
@@ -81,7 +150,7 @@ fetch("PUJO HYMNS.json")
       songDetails.style.display = "block";
     });
 
-    // BACK / PLAY / PAUSE
+    // BACK 
     back.addEventListener("click", () => {
       songList.style.display = "block";
       songDetails.style.display = "none";
@@ -93,14 +162,15 @@ fetch("PUJO HYMNS.json")
 
   });
 
+});
 
-// ===== MENU (IMEREJESHWA HAPA) =====
+//  MENU (UNCHANGED FROM YOUR OLD CODE)
 const menubtn = document.getElementById("menu-btn");
 const menucontent = document.getElementById("menu");
 
-if(menubtn) {
-  menubtn.addEventListener("click", function(){
-    if(menucontent.style.display === "block") {
+if (menubtn) {
+  menubtn.addEventListener("click", function() {
+    if (menucontent.style.display === "block") {
       menucontent.style.display = "none";
     } else {
       menucontent.style.display = "block";
@@ -108,10 +178,8 @@ if(menubtn) {
   });
 
   document.addEventListener("click", function(e) {
-    if(!menubtn.contains(e.target) && !menucontent.contains(e.target)){
+    if (!menubtn.contains(e.target) && !menucontent.contains(e.target)) {
       menucontent.style.display = "none";
     }
   });
 }
-
-});
