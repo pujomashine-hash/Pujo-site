@@ -1,5 +1,4 @@
-// ====================
-// ====== NAVIGATION BAR ======
+document.addEventListener("DOMContentLoaded",()=> {
 const navButtons = document.querySelectorAll(".change");
 const screens = document.querySelectorAll(".screen");
 
@@ -14,29 +13,29 @@ navButtons.forEach(btn => {
   });
 });
 
-
-// ====== SEARCH BAR ======
+// SEARCH BAR 
 const searchInput = document.getElementById("search");
-
-searchInput.addEventListener("keyup", () => {
-  const searchValue = searchInput.value.toLowerCase();
-  document.querySelectorAll(".nyimbo").forEach(song => {
-    const title = song.querySelector(".title").textContent.toLowerCase();
-    if (title.includes(searchValue)) {
-      song.style.display = "";
-    } else {
-      song.style.display = "none";
-    }
+if(searchInput) {
+  searchInput.addEventListener("keyup", () => {
+    const searchValue = searchInput.value.toLowerCase();
+    document.querySelectorAll(".nyimbo").forEach(song => {
+      const title = song.querySelector(".title").textContent.toLowerCase();
+      if (title.includes(searchValue)) {
+        song.style.display = "";
+      } else {
+        song.style.display = "none";
+      }
+    });
   });
-});
+}
 
-// ====================
-// ====== SONG BUTTONS / DOM ELEMENTS ======
+// ====== SONG BUTTONS ======
 const songList = document.getElementById("song-list");
 
 fetch("PUJO HYMNS.json")
   .then(res => res.json())
   .then(data => {
+
     data.forEach(song => {
       const btn = document.createElement("button");
       btn.className = "nyimbo";
@@ -58,7 +57,7 @@ fetch("PUJO HYMNS.json")
       songList.appendChild(btn);
     });
 
-    // Event delegation kwa dynamic buttons
+    // SONG CLICK
     const songDetails = document.getElementById("song-details");
     const lyrics = document.getElementById("lyrics");
     const audio = document.getElementById("audio");
@@ -70,22 +69,13 @@ fetch("PUJO HYMNS.json")
       const btn = e.target.closest(".nyimbo");
       if (!btn) return;
 
-      const lyricsFile = btn.dataset.lyrics;
-      const fileKey = btn.dataset.file;
-
-      // fetch lyrics
-      fetch(lyricsFile)
+      fetch(btn.dataset.lyrics)
         .then(res => res.text())
         .then(data => {
           lyrics.innerHTML = data.replace(/\n/g, "<br>");
         });
 
-      // set audio source
-      fetch("PUJO HYMNS.json")
-        .then(res => res.json())
-        .then(data => {
-          audio.src = btn.dataset.file;
-        });
+      audio.src = btn.dataset.file;
 
       songList.style.display = "none";
       songDetails.style.display = "block";
@@ -97,24 +87,31 @@ fetch("PUJO HYMNS.json")
       songDetails.style.display = "none";
       audio.pause();
     });
+
     play.addEventListener("click", () => audio.play());
     pause.addEventListener("click", () => audio.pause());
+
   });
-    // SIMPLE MENU 
-  const menubtn= document.getElementById("menu-btn")
-  const menucontent=document.getElementById("menu")
-  menubtn.addEventListener("click",function(){
-    if(menucontent.style.display==="block") {
-      menucontent.style.display="none";
-    }else {
-      menucontent.style.display="block";
+
+
+// ===== MENU (IMEREJESHWA HAPA) =====
+const menubtn = document.getElementById("menu-btn");
+const menucontent = document.getElementById("menu");
+
+if(menubtn) {
+  menubtn.addEventListener("click", function(){
+    if(menucontent.style.display === "block") {
+      menucontent.style.display = "none";
+    } else {
+      menucontent.style.display = "block";
     }
+  });
+
+  document.addEventListener("click", function(e) {
+    if(!menubtn.contains(e.target) && !menucontent.contains(e.target)){
+      menucontent.style.display = "none";
+    }
+  });
+}
+
 });
- document.addEventListener("click",function(e) {
-   if(!menubtn.contains(e.target) && !menucontent.contains(e.target)){
-     menucontent.style.display="none";
-   }
- });
- 
-  
-  
