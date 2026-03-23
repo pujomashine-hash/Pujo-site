@@ -60,6 +60,12 @@ fetch("PUJO HYMNS.json")
           <div class="title">${song.title}</div>
           <div class="artist">${song.artist}</div>
         </div>
+           <span class="three-dots">⋮
+         <div class="dots-menu">
+            <p>Share</p>
+            <p>Like 👍</p>
+          </div>
+        </span>
       `;
 
       songList.appendChild(btn);
