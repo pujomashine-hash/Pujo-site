@@ -45,12 +45,16 @@
     
   </div>
   <div id="song-details" class="screen">
-     <h3 id="title"> </h3>
-     <audio controls id="audio" controlsList="nodownload"> </audio> <br>
-       <button id="play" class="controlbtn"> play ▶️</button>
-       <button id="pause" class="controlbtn"> pause ⏯️</button>
-       <button id="back" class="controlbtn"> Return⏹️</button>
-       <button id="fav" class="controlbtn">add ♥️</button>
+     <div class="player">
+         <p id="playing"> Nothing here </p>
+        <div id="progress-container">
+          <div id="progress"></div>
+        </div>
+         <audio id="audio"> </audio>
+         <button id="play" class="controlbtn">play ⏯ </button>
+         <button id="back" class="controlbtn"> Return⏹️</button>
+         <button id="fav" class="controlbtn">add ♥️</button>
+     </div>
             <p id="lyrics"> </p>
   </div>
   <div id="playlist" class="screen">
