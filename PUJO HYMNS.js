@@ -175,10 +175,10 @@ fetch("PUJO HYMNS.json")
     play.addEventListener("click", () => {
   if (audio.paused) {
     audio.play();
-    play.textContent = "pause⏸";
+    play.textContent = "▶";
   } else {
     audio.pause();
-    play.textContent = "play ▶";
+    play.textContent = "▶";
   }
 });
 
@@ -208,7 +208,7 @@ fetch("PUJO HYMNS.json")
 
       const exists = favourites.some(song => song.title === currentSong.title);
 
-      favBtn.textContent = exists ? "❤️" : "Add ♡";
+      favBtn.textContent = exists ? "❤️" : " ♡";
     }
 
     // ===== RENDER FAVOURITES =====
@@ -291,6 +291,19 @@ audio.addEventListener("timeupdate", () => {
     const percent = (audio.currentTime / audio.duration) * 100;
     progress.style.width = percent + "%";
   }
+});
+
+// Seek when user clicks on progress bar
+const progressContainer=document.getElementById("progress-container")
+progressContainer.addEventListener("click", (e) => {
+  const rect = progressContainer.getBoundingClientRect();
+  const clickX = e.clientX - rect.left;
+  const width = rect.width;
+  const percent = clickX / width;
+  audio.currentTime = percent * audio.duration;
+});
+audio.addEventListener("error", () => {
+  Playing.textContent = "❌ Audio not available";
 });
   });
 }
