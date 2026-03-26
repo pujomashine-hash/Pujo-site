@@ -188,7 +188,8 @@ input#search {
   margin-top: 20px;
   font-size: 20px;
   border: none;
-  margin-left: ;
+  margin-left: 10px;
+  box-shadow: 0 0 8px magenta;
 }
 
 /* NAVIGATION BAR  */
@@ -226,7 +227,7 @@ input#search {
 
 /* CUSTOM AUDIO PLAYER */
 .player {
-  background: pink;
+  background:#007bff;
   color: black;
   padding: 15px;
   border-radius: 15px;
@@ -237,12 +238,16 @@ input#search {
 #playing {
   margin-bottom: 10px;
   font-size: 14px;
+  font-weight: bold;
 }
 
 #play{
   background: #222;
   color: white;
   cursor: pointer;
+  width: 65px;
+  height: 65px;
+  border-radius: 50%;
 }
 #progress-container {
   width: 100%;
@@ -257,4 +262,12 @@ input#search {
   height: 100%;
   width: 0%;
   background: #00ffcc;
+}
+#back,#fav {
+  width: 45px;
+  height: 45px;
+  border-radius: 50%;
+}
+.controlbtn:hover {
+  background: #22c55e;
 }
