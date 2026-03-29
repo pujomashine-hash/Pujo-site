@@ -1,13 +1,13 @@
 document.addEventListener("DOMContentLoaded", () => {
-
 const navButtons = document.querySelectorAll(".change");
 const screens = document.querySelectorAll(".screen");
 
 const songList = document.getElementById("song-list");
 const playlistContainer = document.getElementById("playlist-container");
 const All = document.getElementById("All");
+if(songList)songList.style.display = "block";
 
-// ⭐ NEW (FAVOURITES)
+// NEW (FAVOURITES)
 const favBtn = document.getElementById("fav");
 let currentSong = null;
 let favourites = JSON.parse(localStorage.getItem("favourites")) || [];
@@ -17,7 +17,7 @@ if (playlistContainer) {
   playlistContainer.style.visibility = "visible";
 }
 
-// ===== NAVIGATION =====
+// NAVIGATION 
 navButtons.forEach(btn => {
   btn.addEventListener("click", () => {
     navButtons.forEach(b => b.classList.remove("active"));
@@ -25,11 +25,15 @@ navButtons.forEach(btn => {
 
     screens.forEach(screen => screen.style.display = "none");
     const targetId = btn.getAttribute("data-target");
+    if(targetId==="playlist-category"){
+    document.getElementById(targetId).style.display="grid"
+    }else {
     document.getElementById(targetId).style.display = "block";
+    }
   });
 });
 
-// ===== SEARCH =====
+// SEARCH 
 const searchInput = document.getElementById("search");
 
 if (searchInput) {
@@ -49,7 +53,7 @@ if (searchInput) {
   });
 }
 
-// ===== LOAD SONGS =====
+//  LOAD SONGS 
 fetch("PUJO HYMNS.json")
   .then(res => res.json())
   .then(data => {
@@ -76,7 +80,7 @@ fetch("PUJO HYMNS.json")
       songList.appendChild(btn);
     });
 
-    // ===== PLAYLIST CLICK =====
+    //  PLAYLIST CLICK 
     document.querySelectorAll(".playlist").forEach(playlist => {
 
       playlist.addEventListener("click", () => {
@@ -108,7 +112,7 @@ fetch("PUJO HYMNS.json")
 
     });
 
-    // ===== ALL BUTTON =====
+    //  ALL BUTTON 
     if (All) {
       All.addEventListener("click", () => {
 
@@ -129,13 +133,15 @@ fetch("PUJO HYMNS.json")
       });
     }
 
-    // ===== SONG CLICK =====
+    //  SONG CLICK 
     const songDetails = document.getElementById("song-details");
     const lyrics = document.getElementById("lyrics");
     const audio = document.getElementById("audio");
     const play = document.getElementById("play");
     const Playing = document.getElementById("playing");
     const back = document.getElementById("back");
+    const categories=document.querySelectorAll(".category")
+    const favourite=document.getElementById("favourite")
 
     songList.addEventListener("click", e => {
       const btn = e.target.closest(".nyimbo");
@@ -159,14 +165,21 @@ fetch("PUJO HYMNS.json")
 
       songList.style.display = "none";
       songDetails.style.display = "block";
-
+      
       updateFavButton();
     });
+    document.querySelectorAll(".three-dots").forEach(dot => {
+      dot.addEventListener("click",(e)=>{
+        e.stopPropagation();
+      })
+    })
 
-    // ===== BACK =====
+    // BACK
     back.addEventListener("click", () => {
   songList.style.display = "block";
-  songDetails.style.display = "none";
+  songDetails.style.display ="none";
+  favourite.style.display="none";
+  
 
   audio.pause();
   playBtn.textContent = "▶";
@@ -182,7 +195,7 @@ fetch("PUJO HYMNS.json")
   }
 });
 
-    // ===== ❤️ FAVOURITE TOGGLE =====
+    //  ❤️ FAVOURITE TOGGLE
     if (favBtn) {
       favBtn.addEventListener("click", () => {
         if (!currentSong) return;
@@ -202,7 +215,7 @@ fetch("PUJO HYMNS.json")
       });
     }
 
-    // ===== UPDATE BUTTON =====
+    //  UPDATE BUTTON 
     function updateFavButton() {
       if (!currentSong) return;
 
@@ -211,7 +224,7 @@ fetch("PUJO HYMNS.json")
       favBtn.textContent = exists ? "❤️" : " ♡";
     }
 
-    // ===== RENDER FAVOURITES =====
+    //  RENDER FAVOURITES 
     const favScreen = document.getElementById("favourite");
 
     function renderFavourites() {
@@ -254,7 +267,7 @@ fetch("PUJO HYMNS.json")
 
           songList.style.display = "none";
           songDetails.style.display = "block";
-          btn.style.display="none";
+          favScreen.style.display="none"
 
           updateFavButton();
         });
@@ -263,14 +276,14 @@ fetch("PUJO HYMNS.json")
       });
     }
 
-    // ===== INIT =====
+    //  INIT 
     renderFavourites();
 
   });
 
 });
 
-// ===== MENU =====
+//  MENU 
 const menubtn = document.getElementById("menu-btn");
 const menucontent = document.getElementById("menu");
 
@@ -305,5 +318,6 @@ progressContainer.addEventListener("click", (e) => {
 audio.addEventListener("error", () => {
   playing.textContent = "❌ Audio not available";
 });
+
   });
 }
