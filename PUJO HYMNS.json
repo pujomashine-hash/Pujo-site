@@ -162,7 +162,7 @@
     "title":"Baba wajua mapito yetu","artist":"PUJO Hymns","lyrics":"Baba wajua mapito yetu.txt","file":""
   },
   {
-    "title":"Mungu amenihurumia","artist":"PUJO Hymns","lyrics":"Mungu amenihurumia.txt","file":""
+    "title":"Mungu amenihurumia","artist":"PUJO Hymns","lyrics":"Mungu amenihurumia.txt","file":"https://www.dropbox.com/scl/fi/ktveb2gg1a564q3alqeh5/Mungu-amenihurumia-_mir_ist_erbarmung_widerfahren-1.mp3?rlkey=xg8y9e6utpgai27wq40u96o0r&st=us2658zx&dl=1"
   },
   {
     "title":"Ninataka kuingia","artist":"PUJO Hymns","lyrics":"Ninataka kuingia.txt","file":"https://www.dropbox.com/scl/fi/1elazt72r4236kmug532f/Ninatakakuingia.mp3?rlkey=h42d63j8o15sajt0igabamuc3&st=cph0yxit&dl=1"
@@ -492,7 +492,7 @@
      "title":"Chini ya msalaba","artist":"PUJO Hymns","lyrics":"Chini ya msalaba.txt","file":""
    },
    {
-     "title":"Sioni haya kwa Bwana","artist":"PUJO Hymns","lyrics":"Sioni haya kwa Bwana.txt","file":"https://www.dropbox.com/scl/fi/tj48b0uqskzens28jogx6/KWAKE-YESU.mp3?rlkey=31zc64b7uem3ifcpg4khegj3q&st=6q1942i4&dl=1"
+     "title":"Sioni haya kwa Bwana","artist":"PUJO Hymns","lyrics":"Sioni haya kwa Bwana.txt","file":"https://www.dropbox.com/scl/fi/m6dqzd53fuxaqg050c2xf/SIONI-HAYA-KWA-BWANA.mp3?rlkey=7w9007n8ri2vl88eu0k08j1lj&st=e8kwt5z7&dl=1"
    },
    {
      "title":"Kwa wingi wa nyama","artist":"PUJO Hymns","lyrics":"Kwa wingi wa nyama.txt","file":""
@@ -660,7 +660,7 @@
      "title":"Ndoa yetu nzima","artist":"PUJO Hymns","lyrics":"Ndoa yetu nzima.txt","file":""
    },
    {
-     "title":"Neno la Mungu takata","artist":"PUJO Hymns","lyrics":"Neno la Mungu takata.txt","file":""
+     "title":"Neno la Mungu takata","artist":"PUJO Hymns","lyrics":"Neno la Mungu takata.txt","file":"https://www.dropbox.com/scl/fi/g7i7mc98ux6y90npu4y3p/Neno-la-mungu-takata-faith-of-our-father.mp3?rlkey=4zk4e1efkgoidte5tkhbseei2&st=01hr2if1&dl=1"
    },
    {
      "title":"Tegemea mpaka kufa","artist":"PUJO Hymns","lyrics":"Tegemea mpaka kufa.txt","file":""
@@ -716,5 +716,23 @@
    {
      "title":"Nakuapia yesu", "artist":"PUJO Hymns", "lyrics":"Nakuapia yesu.txt",
      "category":"General","file":""
+   },
+   {
+     "title":"Faith of our fathers","artist":"English Hymns","lyrics":"Faith of our fathers.txt","category":"General","file":"https://www.dropbox.com/scl/fi/g7i7mc98ux6y90npu4y3p/Neno-la-mungu-takata-faith-of-our-father.mp3?rlkey=4zk4e1efkgoidte5tkhbseei2&st=xgx9cl07&dl=1"
+   },
+   {
+     "title":"Great is Thy faithfulness","artist":"English Hymns","lyrics":"Great is Thy faithfulness.txt","category":"General","file":"https://www.dropbox.com/scl/fi/9m1nm9lftxwy8t2kx5dfl/Great-is-Thy-faithfulness.mp3?rlkey=wijo1n0gbl8esbjqgzcs8cvs5&st=1dvg53la&dl=1"
+   },
+   {
+     "title":"Blessed assurance","artist":"English Hymns","lyrics":"Blessed assurance.txt","category":"Kuabudu","file":"https://www.dropbox.com/scl/fi/tkecpaljl61dcfbgo6dhg/Blessed-assurance.mp3?rlkey=2wwp4ayqiyq4l7z9w9e4aiux7&st=4dqavlwk&dl=1"
+   },
+   {
+     "title":"Come Thou fount of every blessing","artist":"English Hymns","Come Thou fount of every blessing.txt","Category":"General","file":"https://www.dropbox.com/scl/fi/t9hc6xgeak1nbk6fqb9ox/Come-Thou-fount-of-every-blessing.mp3?rlkey=5ya76dt5or0voy1k438s94kdb&st=j14mhubj&dl=1"
+   },
+   {
+     "title":"Be Thou my vision","artist":"English Hymns","lyrics":"Be Thou my vision.txt","Category":"Kuabudu","file":"https://www.dropbox.com/scl/fi/4bbr8h2rlamf4gdxfyitq/Be_Thou_My_Vision.mp3?rlkey=7ivrzuwr19io0810f1m4rztob&st=2s7yh8si&dl=1"
+   },
+   {
+     "title":"When i survey the wondrous cross","artist":"English Hymns","lyrics":"When i survey the wondrous cross.txt","category":"General","file":""
    }
 ]
