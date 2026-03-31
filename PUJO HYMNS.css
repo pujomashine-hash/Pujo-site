@@ -76,11 +76,14 @@ input#search {
 #playlist-content {
   display: flex;
   gap: 20px;
-  animation: move 12s linear infinite;
+  animation: move 15s linear infinite;
 }
 .playlist {
   min-width: 90px;
   text-align: center;
+}
+#German-Hymns{
+  background-image: url(https://ik.imagekit.io/pry8rixl0/German.jpg);
 }
 .playlist.active {
   background: gray;
