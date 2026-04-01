@@ -74,6 +74,81 @@ if (searchInput) {
 fetch("PUJO HYMNS.json")
   .then(res => res.json())
   .then(data => {
+    // ===== PLAYLIST SYSTEM =====
+const categoryContainer = document.getElementById("playlist-category");
+let playlistButtons = [];
+
+// Tengeneza buttons za playlist (clone)
+data.forEach(song => {
+  const btn = document.createElement("button");
+  btn.className = "nyimbo";
+  btn.dataset.file = song.file;
+  btn.dataset.lyrics = song.lyrics;
+  btn.dataset.category = song.category;
+
+  btn.innerHTML = `
+    <div class="names">
+      <div class="title">${song.title}</div>
+      <div class="artist">${song.artist}</div>
+    </div>
+  `;
+
+  btn.style.display = "none"; // hide initially
+
+  playlistButtons.push(btn);
+  categoryContainer.appendChild(btn);
+});
+
+// CATEGORY CLICK
+document.querySelectorAll(".category").forEach(cat => {
+  cat.addEventListener("click", () => {
+
+    const category = cat.id;
+
+    // show filtered songs
+    playlistButtons.forEach(btn => {
+      if (btn.dataset.category === category) {
+        btn.style.display = "block";
+      } else {
+        btn.style.display = "none";
+      }
+    });
+
+  });
+});
+
+// PLAYLIST BUTTON CLICK (OPEN SONG)
+playlistButtons.forEach(btn => {
+  btn.addEventListener("click", () => {
+
+    const songDetails = document.getElementById("song-details");
+    const lyrics = document.getElementById("lyrics");
+    const audio = document.getElementById("audio");
+    const Playing = document.getElementById("playing");
+
+    const currentSong = {
+      title: btn.querySelector(".title").textContent,
+      artist: btn.querySelector(".artist").textContent,
+      file: btn.dataset.file,
+      lyrics: btn.dataset.lyrics
+    };
+
+    Playing.textContent = currentSong.title + " - " + currentSong.artist;
+
+    fetch(currentSong.lyrics)
+      .then(res => res.text())
+      .then(text => {
+        lyrics.innerHTML = text.replace(/\n/g, "<br>");
+      });
+
+    audio.src = currentSong.file;
+
+    // switch screen
+    categoryContainer.style.display = "none";
+    songDetails.style.display = "block";
+
+  });
+});
 
     data.forEach(song => {
       const btn = document.createElement("button");
@@ -88,7 +163,7 @@ fetch("PUJO HYMNS.json")
         </div>
         <span class="three-dots">⋮
           <div class="dots-menu">
-            <button id="share"> Share </button>
+            <button class="share"> Share </button>
           </div>
         </span>
       `;
@@ -158,10 +233,11 @@ fetch("PUJO HYMNS.json")
     const back = document.getElementById("back");
     const categories=document.querySelectorAll(".category")
     const favourite=document.getElementById("favourite")
-
+  let scrollPosition = 0;
     songList.addEventListener("click", e => {
       const btn = e.target.closest(".nyimbo");
       if (!btn) return;
+      scrollPosition = songList.scrollTop
 
       currentSong = {
         title: btn.querySelector(".title").textContent,
@@ -178,7 +254,7 @@ fetch("PUJO HYMNS.json")
         });
 
       audio.src = btn.dataset.file;
-
+    
       songList.style.display = "none";
       songDetails.style.display = "block";
       
@@ -196,9 +272,13 @@ fetch("PUJO HYMNS.json")
   songDetails.style.display ="none";
   favourite.style.display="none";
   
+  setTimeout(()=> {
+  songList.scrollTop= scrollPosition;
+  },50);
+  
 
   audio.pause();
-  playBtn.textContent = "▶";
+  play.textContent = "▶";
 });
 
     play.addEventListener("click", () => {
@@ -207,7 +287,7 @@ fetch("PUJO HYMNS.json")
     play.textContent = "▶";
   } else {
     audio.pause();
-    play.textContent = "▶";
+    play.textContent = "⏯";
   }
 });
 
@@ -291,7 +371,6 @@ fetch("PUJO HYMNS.json")
         favScreen.appendChild(btn);
       });
     }
-
     //  INIT 
     renderFavourites();
 
@@ -334,7 +413,23 @@ progressContainer.addEventListener("click", (e) => {
 audio.addEventListener("error", () => {
   playing.textContent = "❌ Audio not available";
 });
-
+const Updatebtn= document.getElementById("Cupdate")
+const Version= document.getElementById("Version")
+Updatebtn.addEventListener("click",()=>{
+  Version.textContent="The latest version already insalled"
+});
+const sharebtn= document.getElementById("share")
+sharebtn.addEventListener("click",(e)=>{
+   if(navigator.share) {
+     navigator.share({
+       title:"PUJO HYMNS",
+       text:"Install for free",
+       url:"https://www.mediafire.com/folder/eyz4rcw94hr5l/Updates"
+     });
+   } else {
+    window.alert("Share not supported")
+   }
+});
 
   });
 }
