@@ -23,12 +23,17 @@ body {
   box-shadow: 1px 1px 4px magenta;
   align-items:center;
 }
-#theme {
-  border-radius: 10px;
-  background:gray;
+.settings {
+  background:blue;
   color: white;
-  margin-top:20px;
+  margin-bottom: 2px;
+  width: 100%;
+  height: 40px;
+  box-shadow: 0 0 8px magenta;
 }
+  a {
+    color: white;
+  }
 #menu-btn {
   color: white;
   background: black;
@@ -349,6 +354,10 @@ input#search {
   #favourite {
     display: none;
   }
+  #General {
+    color: black;
+    background: pink;
+  }
   /* CANGING THEME */
 body.light-mode {
   background:white;
@@ -398,4 +407,19 @@ body.light-mode #Version {
 }
 body.light-mode .circle {
   box-shadow: 0 0 8px yellow;
+}
+#ad {
+  background:gray;
+  height: 50px;
+  max-width: 400px;
+  width: 95%;
+  margin-top: 10px;
+  margin-bottom: 10px;
+  cursor: pointer;
+  border-radius: 5px;
+}
+#ad img {
+  width: 100%;
+  height: 50px;
+  border-radius: 5px;
 }
