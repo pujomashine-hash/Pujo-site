@@ -702,7 +702,7 @@
      "title":"Higher ground","artist":"PUJO Hymns","lyrics":"Higher ground.txt","file":""
    },
    {
-     "title":"Ameyashinda mauti","artist":"Sylivester Soud","lyrics":"Ameyashinda mauti.txt","file":"https://www.dropbox.com/scl/fi/qrt7ozjw80o9k9bxiogki/kwaya_KKKT_sunuka_ameyashinda_mauti-256k.mp3?rlkey=z9wt92c3zi8ian3h98pthxb0w&st=6qugsar6&dl=1","category":"pasaka"
+     "title":"Ameyashinda mauti","artist":"Sylivester Soud","lyrics":"Ameyashinda mauti.txt","file":"https://www.dropbox.com/scl/fi/qrt7ozjw80o9k9bxiogki/kwaya_KKKT_sunuka_ameyashinda_mauti-256k.mp3?rlkey=z9wt92c3zi8ian3h98pthxb0w&st=6qugsar6&dl=1","category":"Pasaka"
    },
    {
      "title":"Nijaposema kwa lugha","artist":"Sylivester Soud","lyrics":"Nijaposema kwa lugha.txt","category":"General","file":""
@@ -734,5 +734,38 @@
    },
    {
      "title":"When i survey the wondrous cross","artist":"English Hymns","lyrics":"When i survey the wondrous cross.txt","category":"General","file":""
+   },
+   {
+     "title":"O Thou joyful day","artist":"English Hymns","lyrics":"O Thou joyful day.txt","Category":"Pasaka","file":""
+   },
+   {
+     "title":"O du fröhliche","artist":"German Hymns","lyrics":"O du fröhliche.txt","Category":"Christmas","file":""
+   },
+   {
+     "title":"Striving onward","artist":"English Hymns","lyrics":"Striving onward.txt","Category":"General","file":"https://www.dropbox.com/scl/fi/1elazt72r4236kmug532f/Ninatakakuingia.mp3?rlkey=h42d63j8o15sajt0igabamuc3&st=xr9d7fab&dl=1"
+   },
+   {
+     "title":"Agano letu limetimia","artist":"Yohana magangali","lyrics":"Agano letu limetimia.txt","Category":"Ndoa","file":"https://www.dropbox.com/scl/fi/23qy6nd497ha4bb973lvx/Agano-letu-limetimia.mp3?rlkey=ztat2hd6vbl3rv5z8ges0vgdi&st=ht85no4m&dl=1"
+   },
+   {
+     "title":"Ataniita","artist":"Yohana magangali","lyrics":"Ataniita.txt","Category":"General","Church":"Rc choir","file":"https://www.dropbox.com/scl/fi/wpnr1o2u0b7dtg0vmr0m2/Ataniita.mp3?rlkey=935mon4gbgzf8617np9evczzk&st=jw2kbvgy&dl=1"
+   },
+   {
+     "title":"Nalifurahi waliponiambia","artist":"Yohana magangali","lyrics":"Nalifurahi waliponiambia.txt","Category":"General","Church":"Rc choir","file":"https://www.dropbox.com/scl/fi/p3mll8iznlg2bd01hgp0s/Nalifurahi-waliponiambia-by-Yohana.mp3?rlkey=kfebuv96sn13i3xr1kwe7yk1e&st=st4gk9ng&dl=1"
+   },
+   {
+     "title":"Heri waendao katika sheria ya Bwana","artist":"Yohana magangali","lyrics":"Heri waendao katika sheria ya Bwana.txt","Church":"Rc choir","Category":"General","file":"https://www.dropbox.com/scl/fi/k3uw7ldwaejmvw9vhxfuf/Heri-waendao-katika-sheria-ya-Bwana.mp3?rlkey=tewotingxfibaz7palhyvhrin&st=vo567z1i&dl=1"
+   },
+   {
+     "title":"Wewe Bwana umekuwa makao yetu","artist":"Yohana magangali","lyrics":"Wewe Bwana umekuwa makao yetu.txt","Category":"General","Church":"Rc choir","file":"https://www.dropbox.com/scl/fi/jiq41qi2zi67j5v1evoz2/Wewe-Bwana-umekuwa-makao-yetu.mp3?rlkey=20hotq7cluwre6cfdzqbw8dvf&st=nj965muy&dl=1"
+   },
+   {
+     "title":"Ingekuwa heri leo tusikie sauti yake","artist":"Yohana magangali","lyrics":"Ingekuwa heri leo tusikie sauti yake.txt","Category":"General","Church":"Rc choir","file":"https://www.dropbox.com/scl/fi/bmymiaz5zptrhwnia83rx/Ingekuwa-heri-leo-tusikie-sauti-yake.mp3?rlkey=brnpzur5dq4j8yugvtzii5ejz&st=a418r3dr&dl=1"
+   },
+   {
+     "title":"Shangwe za noeli","artist":"Yohana magangali","lyrics":"Shangwe za noeli.txt","Category":"Christmas","Church":"Rc choir","file":"https://www.dropbox.com/scl/fi/bwc5s231o2hkl8wyn55xq/Shangwe-za-noeli.mp3?rlkey=gbmz13hiu00jukt2d3i5p1u0e&st=q6vd9rd1&dl=1"
+   },
+   {
+     "title":"Bwana ni nuru","artist":"Yohana magangali","lyrics":"Bwana ni nuru.txt","Categories":"General","Church":"Rc choir","file":"https://www.dropbox.com/scl/fi/94qv7aq4ah2bv2e0xtd29/Bwana-ni-nuru.mp3?rlkey=3swmnq3ewyh1ixv6oq7pdtv4y&st=dl26loy8&dl=1"
    }
 ]
