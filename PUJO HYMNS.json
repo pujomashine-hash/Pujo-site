@@ -327,7 +327,7 @@
     "title":"Anipenda ni kweli","artist":"PUJO Hymns","lyrics":"Anipenda ni kweli.txt","file":""
   },
    {
-     "title":"Baba yetu aliye mbinguni","artist":"PUJO Hymns","lyrics":"Baba yetu aliye mbinguni.txt","file":""
+     "title":"Baba yetu aliye mbinguni","artist":"PUJO Hymns","lyrics":"Baba yetu aliye mbinguni.txt","file":"https://www.dropbox.com/scl/fi/fjr76m8zbqloj80vr53f7/Baba-yetu-aliye-mbinguni.mp3?rlkey=jvhk7j40r4uma0ekzjf2yjfgg&st=lx1u53qe&dl=1","Church":"Lutheran choir"
    },
    {
      "title":"Nilikuwa kondoo aliyepotea","artist":"PUJO Hymns","lyrics":"Nilikuwa kondoo aliyepotea.txt","file":""
@@ -618,7 +618,7 @@
      "title":"Karibu na wewe","artist":"PUJO Hymns","lyrics":"Karibu na wewe.txt","file":""
    },
    {
-     "title":"Niongoze Bwana Mungu","artist":"PUJO Hymns","lyrics":"Niongoze Bwana Mungu.txt","file":""
+     "title":"Niongoze Bwana Mungu","artist":"PUJO Hymns","lyrics":"Niongoze Bwana Mungu.txt","file":"https://www.dropbox.com/scl/fi/0lao5iccsooszzlyaeggl/Niongoze-Bwana-Mungu.mp3?rlkey=qjoomacsjsdnf7jg9zxqr8vm4&st=pwiqx9bc&dl=1"
    },
    {
      "title":"Piga sana vita vyema","artist":"PUJO Hymns","lyrics":"Piga sana vita vyema.txt","file":""
@@ -767,5 +767,11 @@
    },
    {
      "title":"Bwana ni nuru","artist":"Yohana magangali","lyrics":"Bwana ni nuru.txt","Categories":"General","Church":"Rc choir","file":"https://www.dropbox.com/scl/fi/94qv7aq4ah2bv2e0xtd29/Bwana-ni-nuru.mp3?rlkey=3swmnq3ewyh1ixv6oq7pdtv4y&st=dl26loy8&dl=1"
+   },
+   {
+     "title":"Guide me o Thou great Jehovah","artist":"English Hymns","lyrics":"Guide me o Thou great Jehovah.txt","Category":"General","Church":"Lutheran choir","file":"https://www.dropbox.com/scl/fi/0lao5iccsooszzlyaeggl/Niongoze-Bwana-Mungu.mp3?rlkey=qjoomacsjsdnf7jg9zxqr8vm4&st=pwiqx9bc&dl=1"
+   },
+   {
+     "title":"Jesus loves even me","artist":"English Hymns","lyrics":"Jesus loves even me.txt","Category":"General","Church":"Lutheran choir","file":"https://www.dropbox.com/scl/fi/fjr76m8zbqloj80vr53f7/Baba-yetu-aliye-mbinguni.mp3?rlkey=jvhk7j40r4uma0ekzjf2yjfgg&st=lx1u53qe&dl=1"
    }
 ]
