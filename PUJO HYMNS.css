@@ -24,7 +24,7 @@ body {
   align-items:center;
 }
 .settings {
-  background:blue;
+  background:#1E88E5;
   color: white;
   margin-bottom: 2px;
   width: 100%;
@@ -292,7 +292,7 @@ input#search {
   grid-template-columns: repeat(2, 1fr);
   gap:10px;
 }
-.category {
+.Category {
   padding: 20px;
   background: yellow;
   text-align: center;
@@ -303,6 +303,9 @@ input#search {
   font-weight: bold;
   display: flex;
   justify-content: center;
+}
+.category.active {
+  background-color: gray;
 }
   #Pasaka {
     background:white;
