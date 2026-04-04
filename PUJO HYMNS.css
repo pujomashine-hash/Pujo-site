@@ -29,6 +29,7 @@ body {
   margin-bottom: 2px;
   width: 100%;
   height: 40px;
+  border: 2px dotted;
   box-shadow: 0 0 8px magenta;
   border-radius: 5px;
 }
