@@ -6,6 +6,15 @@ body {
   padding: 0;
   color: white;
 }
+#top {
+  position: fixed;
+  width: 100%;
+  margin-bottom:20px;
+  justify-content: space-around;
+  z-index: 50;
+  background: black;
+  border: 2px solid black;
+}
 #left{
   display: flex;
 }
@@ -60,6 +69,7 @@ input#search {
 .screen {
   display: none;
   padding: 10px;
+  padding-top: 80px;
 }
 
 #song-list {
@@ -79,6 +89,7 @@ input#search {
   overflow: hidden;
   width: 100%;
   margin-top:15px;
+  z-index: 1;
 }
 #playlist-content {
   display: flex;
@@ -366,6 +377,10 @@ input#search {
   /* CANGING THEME */
 body.light-mode {
   background:white;
+}
+body.light-mode #top {
+  background: #007bff;
+  border: 2px solid white;
 }
 body.light-mode #search{
   box-shadow: 0 0 8px palegreen;
