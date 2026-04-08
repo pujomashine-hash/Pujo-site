@@ -106,7 +106,7 @@ input#search {
 #playlist-content {
   display: flex;
   gap: 20px;
-  animation: move 15s linear infinite;
+  animation: move 25s linear infinite;
 }
 .playlist {
   min-width: 90px;
@@ -274,7 +274,6 @@ input#search {
   text-align: center;
   box-shadow: 0 0 8px magenta;
 }
-
 #playing {
   margin-bottom: 10px;
   font-size: 14px;
@@ -312,10 +311,22 @@ input#search {
   background: #22c55e;
 }
 /* Playlist screen */
-#playlist-category {
+#Category-names {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
-  gap:10px;
+  gap: 10px;
+}
+#Exit {
+  display: flex;
+}
+#Catjina {
+  font-size: 30px;
+}
+#Catjina-Container{
+  background-color: green;
+  display: none;
+  border-radius: 5px;
+  box-shadow: 0 0 8px magenta;
 }
 .Category {
   padding: 20px;
