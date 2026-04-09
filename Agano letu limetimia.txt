@@ -1,12 +1,18 @@
   𝘼𝙂𝘼𝙉𝙊 𝙇𝙀𝙏𝙐 𝙇𝙄𝙈𝙀𝙏𝙄𝙈𝙄𝘼
 Author: Yohana j.magangali(2020)
 
- //Mpenzi wangu wa moyo wangu sogea nikubusu,
-   Wewe ni wangu Mwenyezi Mungu ametuunganisha.
-   Hakika leo limetimia lile letu agano,
-   Mwenyezi Mungu atuongoze tusimame imara,
-   tutunze  vema kiapo chetu siku zote, 
-   tuwe mfano ulio bora kwa wengine.
+ //Mpenzi wangu wa moyo
+   wangu sogea nikubusu,
+   Wewe ni wangu Mwenyezi,
+   Mungu ametuunganisha.
+   Hakika leo limetimia,
+   lile letu agano,
+   Mwenyezi Mungu atuongoze,
+   tusimame imara,
+   tutunze  vema kiapo,
+   chetu siku zote, 
+   tuwe mfano ulio
+   bora kwa wengine.
 
 1.Mzuri wangu tufurahi sote,
   na tucheze leo,hakika hii siku yetu.
