@@ -1,5 +1,5 @@
 {
  "version":"1.0.1",
  "url":"www.google.com",
- "required":""
+ "required":true
 }
