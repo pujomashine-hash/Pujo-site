@@ -186,7 +186,7 @@
     "title":"Nataka nimjue Yesu","artist":"PUJO Hymns","lyrics":"Nataka nimjue yesu.txt","file":""
   },
   {
-    "title":"Ni ujumbe wa Bwana","artist":"PUJO Hymns","lyrics":"Ni ujumbe wa Bwana.txt","file":"https://www.dropbox.com/scl/fi/w18bgh0eqf3whjz1ac9oy/Look-and-live.mp3?rlkey=r0c6pfawbhpbv24z94dsijemd&st=mbfvjuik&dl=1"
+    "title":"Ni ujumbe wa Bwana","artist":"Organist:Keffa Muhanga","lyrics":"Ni ujumbe wa Bwana.txt","Category":"General","Church":"Lutheran choir","file":"https://www.dropbox.com/scl/fi/8bzewcxzr5ifxmgo8ujl9/Ni_ujumbe_wa_Bwana_TMW_73_Organist__Keffa_Muhanga-256k.mp3?rlkey=3wun32jqz5fbdl2qp8wi4ey5d&st=z9cxj79r&dl=1"
   },
   {
     "title":"Mungu atukuzwe","artist":"PUJO Hymns","lyrics":"Mungu atukuzwe.txt","file":"https://www.dropbox.com/scl/fi/ruwj6hycz63v7y6y08vx1/To-god-be-the-glory.mp3?rlkey=1moye0iz3ekdinr64yecfdi1t&st=8uy5axa6&dl=1"
@@ -408,7 +408,7 @@
      "title":"Mungu twatoa shukrani","artist":"PUJO Hymns","lyrics":"Mungu twatoa shukrani.txt","file":""
    },
    {
-     "title":"Yote namtolea Yesu","artist":"PUJO Hymns","lyrics":"Yote namtolea Yesu.txt","Category":"General","Church":"Lutheran choir","file":"https://www.dropbox.com/scl/fi/fjmtfu8uvxgg1q6pox7ae/Yote_Namtolea_Yesu__Played_by_Zawadi_Noel_Mbilinyi-256k.mp3?rlkey=53voa2jm7l72j2w5ih3kvoeqr&st=pl6ytdbu&dl=1"
+     "title":"Yote namtolea Yesu","artist":"Organist:Zawadi Mbilinyi","lyrics":"Yote namtolea Yesu.txt","Category":"General","Church":"Lutheran choir","file":"https://www.dropbox.com/scl/fi/fjmtfu8uvxgg1q6pox7ae/Yote_Namtolea_Yesu__Played_by_Zawadi_Noel_Mbilinyi-256k.mp3?rlkey=53voa2jm7l72j2w5ih3kvoeqr&st=pl6ytdbu&dl=1"
    },
    {
      "title":"Nearer my Lord to Thee","artist":"English Hymns","lyrics":"Nearer my Lord to Thee.txt","file":"https://rebrand.ly/a8a1bf"
@@ -922,5 +922,8 @@
    },
    {
      "title":"Wewe ni Mungu [Haufananishwi]","artist":"Trumpet","lyrics":"Wewe ni Mungu [Haufananishwi].txt","Category":"Kuabudu","Church":"TAG","file":"https://www.dropbox.com/scl/fi/9ozswt4oyrn44q5hoy8kt/Wewe_ni_Mungu-256k.mp3?rlkey=d5c8mey10smvkzaguitz4a2rw&st=wi6i3o76&dl=1"
+   },
+   {
+     "title":"Bwana ndiye nuru","artist":"Kwaya kuu mwimbieni Bwana-KKKT Dodoma","lyrics":"Bwana ndiye nuru.txt","Category":"General","Church":"Lutheran choir","file":"https://www.dropbox.com/scl/fi/8bzewcxzr5ifxmgo8ujl9/Ni_ujumbe_wa_Bwana_TMW_73_Organist__Keffa_Muhanga-256k.mp3?rlkey=3wun32jqz5fbdl2qp8wi4ey5d&st=pgs5oeyl&dl=1"
    }
 ]
