@@ -1,3 +1,4 @@
+
 /*  GLOBAL  */
 body {
   background-color: black;
@@ -6,6 +7,7 @@ body {
   padding: 0;
   color: white;
 }
+
 #top {
   position: fixed;
   width: 100%;
@@ -315,6 +317,7 @@ input#search {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
   gap: 10px;
+  padding-bottom: 50px;
 }
 #Exit {
   display: flex;
@@ -397,6 +400,27 @@ input#search {
     color: black;
     background: pink;
   }
+ #Sadaka {
+    background-color: Magenta;
+ }
+ #Ndoa {
+   background: palegreen;
+   color: black;
+ }
+ #Mazishi {
+   background: black;
+ }
+#Ekaristi {
+  background: gray;
+}
+#Nyimbo-za-asili {
+  background: #1DB9;
+  font-family: 'Roboto',sans-Serif;
+}
+#Watoto {
+background: #4FC3F7;
+font-family: 'Poppins',sans-Serif;
+}
   /* CANGING THEME */
 body.light-mode {
   background:white;
