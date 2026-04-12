@@ -195,7 +195,7 @@
     "title":"Bwana Mungu nashangaa kabisa","artist":"PUJO Hymns","lyrics":"Bwana Mungu nashangaa kabisa.txt","file":""
   },
   {
-    "title":"Yesu kwetu ni rafiki","artist":"PUJO Hymns","Category":"General","Church":"General","lyrics":"Yesu kwetu ni rafiki.txt","file":"https://www.dropbox.com/scl/fi/pxdpdbhhn0ihctifcep8w/Yesu_ni_Rafiki_Yetu_TMW_259-256k.mp3?rlkey=pl0srsn9ulzmzxjiz9fpespsv&st=8vifsvtx&dl=1"
+    "title":"Yesu kwetu ni rafiki","artist":"Organist:Zawadi Mbilinyi","Category":"General","Church":"General","lyrics":"Yesu kwetu ni rafiki.txt","file":"https://www.dropbox.com/scl/fi/pxdpdbhhn0ihctifcep8w/Yesu_ni_Rafiki_Yetu_TMW_259-256k.mp3?rlkey=pl0srsn9ulzmzxjiz9fpespsv&st=8vifsvtx&dl=1"
   },
   {
     "title":"Njooni tuimbe wimbo huu","artist":"PUJO Hymns","lyrics":"Njooni tuimbe wimbo huu.txt","file":"https://rebrand.ly/47d667"
@@ -210,7 +210,7 @@
     "title":"Usinipite mwokozi","artist":"PUJO Hymns","lyrics":"Usinipite mwokozi.txt","file":"https://rebrand.ly/5028e1"
   },
   {
-    "title":"Sioshwi dhambi zangu","artist":"PUJO Hymns","lyrics":"Sioshwi dhambi zangu.txt","file":"https://rebrand.ly/ef3042"
+    "title":"Sioshwi dhambi zangu","artist":"PUJO Hymns","lyrics":"Sioshwi dhambi zangu.txt","Category":"Ekaristi","Church":"Lutheran choir","file":"https://www.dropbox.com/scl/fi/7nluvtw57je4i7raf0ls5/Sioshwi_dhambi_zangu-256k.mp3?rlkey=wpjtngdx20drgwcd95iq0mql8&st=ncqyc0cr&dl=1"
   },
   {
     "title":"Kijito cha utakaso","artist":"PUJO Hymns","lyrics":"Kijito cha utakaso.txt","file":""
@@ -222,7 +222,7 @@
     "title":"Wamwendea Yesu kwa kusafishwa","artist":"PUJO Hymns","lyrics":"Wamwendea Yesu kwa kusafishwa.txt","file":"https://www.dropbox.com/scl/fi/cys6xgqfqq86j6w6m8f3s/Are-you-washed-in-the-blood.mp3?rlkey=dd6i87glz1yhe3662bq49ssdm&st=zt9t0gf2&dl=1"
   },
   {
-    "title":"Pass me not","artist":"English Hymns","lyrics":"Pass me not.txt","file":""
+    "title":"Pass me not","artist":"English Hymns","lyrics":"Pass me not.txt","Category":"Kwaresma","Church":"General","file":"https://rebrand.ly/5028e1"
   },
   {
     "title":"Close to Thee","artist":"English Hymns","lyrics":"Close to Thee.txt","file":"https://www.dropbox.com/scl/fi/yt7jkhj2ox2ipemthmz2o/Close-to-Thee.mp3?rlkey=a534l0s22l9340yyo58hlggsf&st=m1pjkekp&dl=1"
@@ -925,5 +925,26 @@
    },
    {
      "title":"Bwana ndiye nuru","artist":"Kwaya kuu mwimbieni Bwana-KKKT Dodoma","lyrics":"Bwana ndiye nuru.txt","Category":"General","Church":"Lutheran choir","file":"https://www.dropbox.com/scl/fi/8bzewcxzr5ifxmgo8ujl9/Ni_ujumbe_wa_Bwana_TMW_73_Organist__Keffa_Muhanga-256k.mp3?rlkey=3wun32jqz5fbdl2qp8wi4ey5d&st=pgs5oeyl&dl=1"
+   },
+   {
+     "title":"Ni salama mikononi mwake","artist":"Organist:Keffa Muhanga","Category":"General","Church":"Lutheran choir","lyrics":"Ni salama mikononi mwake.txt","file":"https://www.dropbox.com/scl/fi/c55ya8jmbwme60onu0r29/Ni_salama_mikononi_mwake_-Organist_Keffa_Muhanga-256k.mp3?rlkey=jn9xtw49lgc7wjyjiq1rdfemf&st=qq54r5q5&dl=1"
+   },
+   {
+     "title":"Tunalo neno","artist":"Kwaya kuu mwimbieni Bwana-KKKT Dodoma","lyrics":"Tunalo neno.txt","Category":"General","Church":"Lutheran choir","file":"https://www.dropbox.com/scl/fi/2va28pampvpipsxv268mw/Tunalo_neno...-mtunzi_Greyson_Mtaita_na_umeimbwa_na_kwaya_kuu_KKKT_Dodoma_Mjini-256k.mp3?rlkey=9j5vauskbn38ho2qo0iiabua5&st=5pbps8o0&dl=1"
+   },
+   {
+     "title":"Sishangai niyaonapo","artist":"Kwaya kuu mwimbieni Bwana-KKKT Dodoma","lyrics":"Sishangai niyaonapo.txt","Category":"General","Church":"Lutheran choir","file":"https://www.dropbox.com/scl/fi/p7kxpl9ouxp3hkoc1hfmw/Sishangai_niyaonapo._....Music_and_Words_by_Zawadi_Noel_Mbilinyi__ZANO_-256k.mp3?rlkey=0ex5ogc4ydxyn5qqekh5jbtf7&st=t6viuysx&dl=1"
+   },
+   {
+     "title":"Nikushukuruje Mungu wangu","artist":"Kwaya kuu mwimbieni Bwana-KKKT Dodoma","Category":"Shukrani","Church":"Lutheran choir","file":"https://www.dropbox.com/scl/fi/8l8j827qo6dg19kvj7kf8/Nikushukuruje_Mungu_wangu-Composed_by_Zawadi_Noel_Mbilinyi__ZANO_-256k.mp3?rlkey=yi8gq4l24719zgkeackea1in9&st=a4qbn5t2&dl=1"
+   },
+   {
+     "title":"Haki huinua Taifa","artist":"Kwaya ya kaanani-KKKT Dodoma","Category":"General","Church":"Lutheran choir","file":"https://www.dropbox.com/scl/fi/x7sq96482juwrlupj2aw4/Haki_huinua_Taifa.Kwaya_ya_Kaanani_K.K.K.T-KANISA_KUU_DODOMA-256k.mp3?rlkey=dy94i9ajrr5g1bopag31z1fyi&st=mbvrd55j&dl=1"
+   },
+   {
+     "title":"Haya ee moyo wangu","artist":"Lutheran Church","lyrics":"Haya ee moyo wangu.txt","Category":"Kusifu","Church":"Lutheran choir","file":"https://www.dropbox.com/scl/fi/ec8kl09kb6yryl2mmdv1f/Haya-ee-moyo-wangu.mp3?rlkey=moj687y1morfa8l51m4ky763h&st=ltbp5lyw&dl=1"
+   },
+   {
+     "title":"Njooni sasa","artist":"Kwaya kuu mwimbieni Bwana-KKKT Dodoma","Category":"General","Church":"Lutheran choir","lyrics":"Njooni sasa.txt","file":"https://www.dropbox.com/scl/fi/p3955niz24ozkotedekml/Njooni_sasa-Mtunzi_Erasto_Makweta_na_umeimbwa_na_Kwaya_Kuu_KKKT_Dodoma_Mjini-256k.mp3?rlkey=k48x6swzb1e00h0x14sl18e5o&st=82fef63j&dl=1"
    }
 ]
