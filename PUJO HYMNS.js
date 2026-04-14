@@ -8,6 +8,27 @@ let lastScreen= "song-list";
 const All = document.getElementById("All");
 if(songList)songList.style.display = "block";
 
+function checkUpdate() {
+  const currentVersion = "1.0.0";
+
+  fetch("https://raw.githubusercontent.com/pujomashine-hash/PUJO-HYMNS/main/Version.json")
+    .then(res => res.json())
+    .then(data => {
+
+      if (data.version !== currentVersion) {
+        if (confirm("Kuna update mpya. Unataka kupakua?")) {
+          window.location.href = data.url;
+        }
+      } else {
+        alert("App yako iko updated tayari ");
+      }
+
+    })
+    .catch(() => {
+    });
+}
+checkUpdate();
+   
 const Themechange=document.getElementById("theme")
 if(Themechange) {
 const Savedtheme=localStorage.getItem("theme")
@@ -441,15 +462,20 @@ audio.addEventListener("error", () => {
 const sharebtn= document.getElementById("share")
  if(sharebtn) {
 sharebtn.addEventListener("click",(e)=>{
-      if(navigator.share){
-       navigator.share({
-       title:"PUJO HYMNS",
-       text:"Install for free",
-       url:"https://www.mediafire.com/folder/eyz4rcw94hr5l/Updates"
-     });
-  } else {
-    window.alert("Share not supported")
+  const {share}= await
+  import ('@capacitor/share');
+
+async function shareApp() {
+  try {
+    await Share.share({
+      title: 'PUJO HYMNS',
+      text: 'Install for free',
+      url: 'https://www.mediafire.com/folder/eyz4rcw94hr5l/Updates'
+    });
+  } catch (e) {
+    console.log(e);
   }
+}
 });
 }
 
@@ -472,7 +498,9 @@ const Exitbtn = document.getElementById("Exit")
     CategorySongs.style.display="none";
   });
    }
-   document.getElementById("Cupdate").addEventListener("click",()=>{
+const  Cupdate=document.getElementById("Cupdate")
+   if(Cupdate){
+   Cupdate.addEventListener("click",()=>{
      function checkUpdate() {
   const currentVersion = "1.0.0";
 
@@ -490,9 +518,10 @@ const Exitbtn = document.getElementById("Exit")
 
     })
     .catch(() => {
-      alert("Imeshindikana kuangalia update (check internet)");
+      alert("Unganisha kwenye mtandao");
     });
 }
 checkUpdate();
    });
+   }
 });
