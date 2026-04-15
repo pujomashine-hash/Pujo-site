@@ -20,7 +20,7 @@ function checkUpdate() {
           window.location.href = data.url;
         }
       } else {
-        alert("App yako iko updated tayari ");
+        alert("Nyimbo zimepakiwa kikamilifu ✅");
       }
 
     })
@@ -498,30 +498,16 @@ const Exitbtn = document.getElementById("Exit")
     CategorySongs.style.display="none";
   });
    }
-const  Cupdate=document.getElementById("Cupdate")
-   if(Cupdate){
-   Cupdate.addEventListener("click",()=>{
-     function checkUpdate() {
-  const currentVersion = "1.0.0";
+   const Fontchanger=document.getElementById("Font-changer")
+   if(Fontchanger){
+   Fontchanger.addEventListener("click", () => {
+     if(document.body.style.fontSize === "20px"){
+       document.body.style.fontSize = "25px";
+     } else {
+  document.body.style.fontSize = "20px";
+     }
+});
+} 
 
-  fetch("https://raw.githubusercontent.com/pujomashine-hash/PUJO-HYMNS/main/Version.json")
-    .then(res => res.json())
-    .then(data => {
 
-      if (data.version !== currentVersion) {
-        if (confirm("Kuna update mpya. Unataka kupakua?")) {
-          window.location.href = data.url;
-        }
-      } else {
-        alert("App yako iko updated tayari ");
-      }
-
-    })
-    .catch(() => {
-      alert("Unganisha kwenye mtandao");
-    });
-}
-checkUpdate();
-   });
-   }
 });
