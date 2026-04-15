@@ -459,24 +459,22 @@ audio.addEventListener("error", () => {
 });
   });
   
-const sharebtn= document.getElementById("share")
- if(sharebtn) {
-sharebtn.addEventListener("click",(e)=>{
-  const {share}= await
-  import ('@capacitor/share');
+const sharebtn = document.getElementById("share");
 
-async function shareApp() {
-  try {
-    await Share.share({
-      title: 'PUJO HYMNS',
-      text: 'Install for free',
-      url: 'https://www.mediafire.com/folder/eyz4rcw94hr5l/Updates'
-    });
-  } catch (e) {
-    console.log(e);
-  }
-}
-});
+if (sharebtn) {
+  sharebtn.addEventListener("click", async () => {
+    const { Share } = await import('@capacitor/share');
+
+    try {
+      await Share.share({
+        title: 'PUJO HYMNS',
+        text: 'Install for free',
+        url: 'https://www.mediafire.com/folder/eyz4rcw94hr5l/Updates'
+      });
+    } catch (e) {
+      console.log(e);
+    }
+  });
 }
 
 
