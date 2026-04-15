@@ -459,7 +459,7 @@ audio.addEventListener("error", () => {
 });
   });
   
-const sharebtn = document.getElementById("share");
+const sharebtn = document.getElementById("share-app");
 
 if (sharebtn) {
   sharebtn.addEventListener("click", async () => {
