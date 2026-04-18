@@ -23,18 +23,18 @@ jobs:
           distribution: 'temurin'
           java-version: '17'
 
-      # 🔥 IMPORTANT
       - name: Install dependencies
-        run: |
-          npm install
-          npm install @capacitor/cli
+        run: npm install
 
-      # 🔥 FIX PERMISSION + SYNC
+      # 🔥 FIX PERMISSION
+      - name: Fix permissions
+        run: chmod -R 755 node_modules/.bin
+
+      # 🔥 SYNC (FIXED)
       - name: Sync Capacitor
-        run: |
-          npx cap sync android
+        run: npx --yes cap sync android
 
-      # 🔥 CREATE KEYSTORE
+      # 🔥 KEYSTORE
       - name: Decode Keystore
         run: |
           mkdir -p android/app
@@ -43,15 +43,14 @@ jobs:
       # 🔥 BUILD
       - name: Build Release APK
         run: |
-          cd android
-          chmod +x gradlew
-          ./gradlew assembleRelease \
-          -Pandroid.injected.signing.store.file=app/release.keystore \
+          cd android/app
+          chmod +x ../gradlew
+          ../gradlew assembleRelease \
+          -Pandroid.injected.signing.store.file=release.keystore \
           -Pandroid.injected.signing.store.password=${{ secrets.KEYSTORE_PASSWORD }} \
           -Pandroid.injected.signing.key.alias=${{ secrets.KEY_ALIAS }} \
           -Pandroid.injected.signing.key.password=${{ secrets.KEY_PASSWORD }}
 
-      # 🔹 Upload
       - name: Upload APK
         uses: actions/upload-artifact@v4
         with:
