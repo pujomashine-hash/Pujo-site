@@ -1,4 +1,4 @@
-name: Build APK
+name: Build Signed APK
 
 on:
   push:
@@ -15,9 +15,9 @@ jobs:
       - name: Setup Node
         uses: actions/setup-node@v3
         with:
-          node-version: 22
+          node-version: 18
 
-      # ✅ Tumia Java 17 (fix ya error ya "invalid source release: 21")
+      # ✅ Java 17 (IMPORTANT kwa Capacitor 5)
       - name: Setup Java
         uses: actions/setup-java@v4
         with:
@@ -27,28 +27,34 @@ jobs:
       - name: Install dependencies
         run: npm install
 
-      # ✅ Install Capacitor properly (fix ya permission denied)
-      - name: Install Capacitor CLI
-        run: npm install @capacitor/cli
-
-      # ✅ Hakikisha android ipo
-      - name: Add Android platform
-        run: npx @capacitor/cli add android || echo "Already exists"
-
-      # ✅ Sync bila error ya cap permission
+      # ✅ Hakikisha capacitor iko sawa
       - name: Sync Capacitor
-        run: npx @capacitor/cli sync android
+        run: npx cap sync android
 
-      # ✅ Build DEBUG APK (hakuna signing)
-      - name: Build Debug APK
+      # ✅ Decode keystore kutoka secrets
+      - name: Decode Keystore
+        run: |
+          echo "${{ secrets.KEYSTORE_BASE64 }}" > keystore.base64
+          base64 -d keystore.base64 > my-release-key.keystore
+
+      # ✅ Move keystore ndani ya android
+      - name: Move keystore
+        run: mv my-release-key.keystore android/my-release-key.keystore
+
+      # ✅ Build SIGNED RELEASE APK
+      - name: Build Release APK
         run: |
           cd android
           chmod +x gradlew
-          ./gradlew assembleDebug
+          ./gradlew assembleRelease \
+          -Pandroid.injected.signing.store.file=my-release-key.keystore \
+          -Pandroid.injected.signing.store.password=${{ secrets.KEYSTORE_PASSWORD }} \
+          -Pandroid.injected.signing.key.alias=${{ secrets.KEY_ALIAS }} \
+          -Pandroid.injected.signing.key.password=${{ secrets.KEY_PASSWORD }}
 
-      # ✅ Upload APK sahihi
+      # ✅ Upload APK
       - name: Upload APK
         uses: actions/upload-artifact@v4
         with:
-          name: app-debug
-          path: android/app/build/outputs/apk/debug/app-debug.apk
+          name: app-release
+          path: android/app/build/outputs/apk/release/app-release.apk
