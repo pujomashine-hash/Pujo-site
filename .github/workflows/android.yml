@@ -9,49 +9,49 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
-      # 🔹 Checkout repo
       - name: Checkout
         uses: actions/checkout@v3
 
-      # 🔹 Node setup
       - name: Setup Node
         uses: actions/setup-node@v3
         with:
           node-version: 18
 
-      # 🔹 Java 17 (important kwa Capacitor 5)
       - name: Setup Java
         uses: actions/setup-java@v4
         with:
           distribution: 'temurin'
           java-version: '17'
 
-      # 🔹 Install dependencies
+      # 🔥 IMPORTANT
       - name: Install dependencies
-        run: npm install
+        run: |
+          npm install
+          npm install @capacitor/cli
 
-      # 🔹 Sync capacitor
+      # 🔥 FIX PERMISSION + SYNC
       - name: Sync Capacitor
-        run: npx cap sync android
+        run: |
+          npx cap sync android
 
-      # 🔥 Create keystore file inside android/app
+      # 🔥 CREATE KEYSTORE
       - name: Decode Keystore
         run: |
           mkdir -p android/app
           echo "${{ secrets.KEYSTORE_BASE64 }}" | base64 -d > android/app/release.keystore
 
-      # 🔥 Build signed APK (NO PATH ERROR)
+      # 🔥 BUILD
       - name: Build Release APK
         run: |
-          cd android/app
-          chmod +x ../gradlew
-          ../gradlew assembleRelease \
-          -Pandroid.injected.signing.store.file=release.keystore \
+          cd android
+          chmod +x gradlew
+          ./gradlew assembleRelease \
+          -Pandroid.injected.signing.store.file=app/release.keystore \
           -Pandroid.injected.signing.store.password=${{ secrets.KEYSTORE_PASSWORD }} \
           -Pandroid.injected.signing.key.alias=${{ secrets.KEY_ALIAS }} \
           -Pandroid.injected.signing.key.password=${{ secrets.KEY_PASSWORD }}
 
-      # 🔹 Upload APK
+      # 🔹 Upload
       - name: Upload APK
         uses: actions/upload-artifact@v4
         with:
