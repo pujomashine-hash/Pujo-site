@@ -17,7 +17,7 @@ jobs:
         with:
           node-version: 18
 
-      # ✅ Tumia Java 17 (IMPORTANT)
+      # ✅ Java 17 (sahihi kabisa)
       - name: Setup Java
         uses: actions/setup-java@v4
         with:
@@ -27,21 +27,25 @@ jobs:
       - name: Install dependencies
         run: npm install
 
+      # 🔥 FIX permission ya cap (HII NDIO ILIKUA INAKOSEKANA)
+      - name: Fix cap permission
+        run: chmod +x node_modules/.bin/cap
+
       # ✅ Hakikisha android ipo
-      - name: Add Android platform (safe)
+      - name: Add Android platform
         run: npx cap add android || echo "Already exists"
 
       - name: Sync Capacitor
         run: npx cap sync android
 
-      # ✅ Build DEBUG APK (hakuna signing)
+      # ✅ Build DEBUG APK
       - name: Build Debug APK
         run: |
           cd android
           chmod +x gradlew
           ./gradlew assembleDebug
 
-      # ✅ Upload APK sahihi
+      # ✅ Upload APK
       - name: Upload APK
         uses: actions/upload-artifact@v4
         with:
