@@ -15,7 +15,7 @@ jobs:
       - name: Setup Node
         uses: actions/setup-node@v3
         with:
-          node-version: 18
+          node-version: 22
 
       # ✅ Tumia Java 17 (fix ya error ya "invalid source release: 21")
       - name: Setup Java
