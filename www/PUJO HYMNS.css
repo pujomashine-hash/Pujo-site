@@ -1,4 +1,6 @@
-/*  GLOBAL  */
+html {
+  scroll-behavior: smooth;
+}
 body {
   background-color: black;
   text-align: center;
@@ -54,7 +56,7 @@ body {
 #menu-btn {
   color: white;
   background: black;
-  height: 30px;
+  height: auto;
   width: 40px;
   border-radius: 10px;
   font-size: 30px;
@@ -82,6 +84,7 @@ input#search {
   max-width: 1000px;
   margin: 0 auto;
   padding-bottom: 50px;
+  scroll-behavior: smooth;
 }
 #jina-container {
   display: none;
@@ -164,16 +167,40 @@ input#search {
   display: flex;
   justify-content: space-between;
   cursor: pointer;
-  align-items: center;
+  align-items: flex-start;
 }
 
 .nyimbo:hover {
   background-color: #2a2a2a;
 }
+.btn-image {
+  width: 40px;
+  height: 40px;
+  flex-shrink: 0;
+  background: #ccc;
+  background-image: url("logo.png");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+}
+.btn-image img {
+  object-fit: cover;
+  width: 40px;
+  height: 40px;
+}
+.left-img {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+.text-btn {
+  flex-direction: column;
+  width: 100%;
+}
 
 .names {
   flex: 1;
-  text-align: left;
+  display: flex;
   flex-direction: column;
   text-align: left;
   align-items: flex-start;
@@ -182,6 +209,8 @@ input#search {
 .title {
   font-weight: bold;
   font-size: 20px;
+  text-indent: 0;
+  text-align: left;
 }
 
 .artist {
@@ -189,6 +218,7 @@ input#search {
   color: #aaa;
   padding: 0;
   margin: 0;
+  text-align: left;
 }
 
 /*  THREE DOTS DROPDOWN  */
